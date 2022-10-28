@@ -1,6 +1,11 @@
 const express = require('express');
+const cors = require('cors');
+
 
 const app = express();
+
+// Allow all origins
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.status(200).send({
